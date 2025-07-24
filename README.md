@@ -5,7 +5,7 @@ Boas vindas ao projeto `NOME-DO-WORKSHOP`! Fique atento a cada passo que você d
 <details>
 <summary><b>🤷🏽‍♀️ Como entregar</b></summary>
 
-Para entregar o seu projeto, você deverá fazer um _Pull Request_ neste repositório.
+Para entregar o seu projeto, você deverá fazer um _Pull Request_ neste repositório.!
 Lembre-se que você pode consultar o conteúdo do workshop de _Git e Github_ sempre que precisar.
 
 Seu _Pull Request_ deverá estar no seguinte formato:
