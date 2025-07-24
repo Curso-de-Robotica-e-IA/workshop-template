@@ -61,7 +61,7 @@ const xml2js = require('xml2js');
         owner,
         repo,
         issue_number: prNumber,
-        body: md,
+        body: commentBody,
       });
     }
 

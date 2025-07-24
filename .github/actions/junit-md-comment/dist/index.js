@@ -38518,7 +38518,7 @@ const xml2js = __nccwpck_require__(7141);
         owner,
         repo,
         issue_number: prNumber,
-        body: md,
+        body: commentBody,
       });
     }
 
