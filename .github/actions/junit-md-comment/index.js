@@ -9,7 +9,7 @@ const xml2js = require('xml2js');
     const githubToken = core.getInput('github_token');
     const commentTag = core.getInput('comment_tag') || 'junit-report';
 
-    const xml = fs.readFileSync(junitPath, 'utf-8');
+    const xmlData = fs.readFileSync(junitPath, 'utf-8');
     const parser = new xml2js.Parser();
     const results = await parser.parseStringPromise(xmlData);
 
