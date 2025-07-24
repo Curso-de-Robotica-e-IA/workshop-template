@@ -1,0 +1,15 @@
+name: 'JUnit to Markdown PR Comment'
+description: 'Parses JUnit XML, converts to Markdown and posts to PR'
+inputs:
+  junit_path:
+    description: 'Path to JUnit XML file'
+    required: true
+  comment_tag:
+    description: 'Tag for updating comment instead of duplicating'
+    required: false
+  github_token:
+    description: 'GitHub Token'
+    required: true
+runs:
+  using: 'node16'
+  main: 'index.js'
