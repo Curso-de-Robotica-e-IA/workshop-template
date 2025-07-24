@@ -11,27 +11,32 @@ const xml2js = require('xml2js');
 
     const xml = fs.readFileSync(junitPath, 'utf-8');
     const parser = new xml2js.Parser();
-    const result = await parser.parseStringPromise(xml);
+    const results = await parser.parseStringPromise(xmlData);
 
-    const testsuite = result.testsuite || result.testsuites.testsuite[0];
-    const total = testsuite.$.tests;
-    const failures = testsuite.$.failures;
-    const time = testsuite.$.time;
-
-    let md = `### 🧪 JUnit Test Results\n`;
-    md += `**Tests:** ${total}  |  **Failures:** ${failures}  |  **Time:** ${time}s\n\n`;
-
-    for (const testcase of testsuite.testcase) {
-      const name = testcase.$.name;
-      if (testcase.failure) {
-        md += `❌ **${name}**\n\`\`\`\n${testcase.failure[0]._}\n\`\`\`\n`;
+    const testCases = results.testsuites.testsuite[0].testcase;
+    let markdownTable = `| Test | Status |\n|------|--------|\n`;
+    let failedTests = [];
+    
+    testCases.forEach(test => {
+      const testName = test.$.name;
+      if (test.failure) {
+        markdownTable += `| ${testName} | ❌ | \n`;
+        failedTests.push({ name: testName, message: test.failure[0]._ });
       } else {
-        md += `✅ **${name}**\n`;
+        markdownTable += `| ${testName} | ✅ | \n`;
       }
+    });
+
+    let failureDetails = "";
+    if (failedTests.length > 0) {
+      failureDetails = "\n<details>\n <summary>❌ Failed Tests (Click to Expand)</summary>\n\n";
+      failedTests.forEach(test => {
+        failureDetails += `**${test.name}**\n\`\`\`\n${test.message.trim()}\n\`\`\`\n\n`;
+      });
+      failureDetails += "</details>\n";
     }
 
-    md += `\n<!-- ${commentTag} -->`;
-
+    const commentBody = `### Pytest Results 🧪\n\n${markdownTable}${failureDetails}`;
     const octokit = github.getOctokit(githubToken);
     const { owner, repo } = github.context.repo;
     const prNumber = github.context.payload.pull_request.number;
@@ -49,7 +54,7 @@ const xml2js = require('xml2js');
         owner,
         repo,
         comment_id: previous.id,
-        body: md,
+        body: commentBody,
       });
     } else {
       await octokit.rest.issues.createComment({
