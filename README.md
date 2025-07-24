@@ -1,6 +1,6 @@
 # Template para Workshop
 Boas vindas ao projeto `NOME-DO-WORKSHOP`! Fique atento a cada passo que você deverá seguir para entregar a avaliação com sucesso. Qualquer dúvida, entre em contato pelo **GChat**. Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto à partir desse repositório, utilizando uma _branch_ específica e um _Pull Request_ para entrega.
-
+.
 # Entregáveis
 <details>
 <summary><b>🤷🏽‍♀️ Como entregar</b></summary>
