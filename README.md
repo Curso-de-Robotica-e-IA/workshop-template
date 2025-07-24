@@ -15,7 +15,7 @@ Seu _Pull Request_ deverá estar no seguinte formato:
 
 <details>
 <summary><b>📝 O que deverá ser desenvolvido?</b></summary>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor eros eu dui interdum iaculis. Proin quis facilisis dui, et efficitur sem. Donec sit amet ante a diam vulputate hendrerit. Aliquam erat volutpat. Cras sodales magna nec eros varius suscipit. Maecenas et mauris eget sem fermentum malesuada eu non lectus. Mauris vel arcu molestie, vestibulum mauris quis, sodales nisl. Quisque pulvinar nulla quis nunc vulputate, at bibendum ipsum dapibus. Curabitur dignissim diam vitae porttitor ultricies. Quisque semper magna et ex viverra mattis. Etiam sit amet luctus nulla, eget auctor velit. Pellentesque in nulla dui. Mauris ipsum mi, molestie et feugiat vel, mollis sed turpis. Integer a dui vehicula, porttitor sem at, rutrum nulla. Quisque fringilla felis turpis, ut maximus sapien sagittis eget.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor eros eu dui interdum iaculis. Proin quis facilisis dui, et efficitur sem. Donec sit amet ante a diam vulputate hendrerit. Aliquam erat volutpat. Cras sodales magna nec eros varius suscipit. Maecenas et mauris eget sem fermentum malesuada eu non lectus. Mauris vel arcu molestie, vestibulum mauris quis, sodales nisl. Quisque pulvinar nulla quis nunc vulputate, at bibendum ipsum dapibus. Curabitur dignissim diam vitae porttitor ultricies. Quisque semper magna et ex viverra mattis. Etiam sit amet luctus nulla, eget auctor velit. Pellentesque in nulla dui. Mauris ipsum mi, molestie et feugiat vel, mollis sed turpis. Integer a dui vehicu!la, porttitor sem at, rutrum nulla. Quisque fringilla felis turpis, ut maximus sapien sagittis eget.
 
 </details>
 
